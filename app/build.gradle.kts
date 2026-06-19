@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.ecoufrr"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.ecoufrr"
@@ -49,4 +45,10 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.core:core:1.12.0")
+    
+    // OSMDroid for Maps
+    implementation("org.osmdroid:osmdroid-android:6.1.18")
+
+    // Google Play Services for Location
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 }

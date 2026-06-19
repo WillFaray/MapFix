@@ -1,6 +1,8 @@
 package com.example.ecoufrr;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +40,10 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             if (db.validarUsuario(matricula, senha)) {
+                // Salvar sessão
+                SharedPreferences pref = getSharedPreferences("EcoUFRR_Prefs", Context.MODE_PRIVATE);
+                pref.edit().putBoolean("isLoggedIn", true).apply();
+
                 Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);

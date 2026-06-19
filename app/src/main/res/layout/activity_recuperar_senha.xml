@@ -1,64 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:gravity="center">
+    android:fillViewport="true"
+    android:background="@android:color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recuperar Senha"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Para simular a recuperação, basta informar a matrícula e a nova senha."
-        android:layout_marginBottom="16dp"
-        android:textAlignment="center"/>
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/et_recuperar_matricula"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Matrícula"
-        android:inputType="number"
-        android:layout_marginBottom="12dp"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo EcoUFRR"
+            android:layout_marginBottom="16dp"/>
 
-    <EditText
-        android:id="@+id/et_nova_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nova Senha"
-        android:inputType="textPassword"
-        android:layout_marginBottom="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recuperar Senha"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="16dp"/>
 
-    <EditText
-        android:id="@+id/et_confirmar_nova_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirmar Nova Senha"
-        android:inputType="textPassword"
-        android:layout_marginBottom="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informe sua matrícula para redefinir sua senha de acesso."
+            android:layout_marginBottom="24dp"
+            android:textAlignment="center"
+            android:textColor="#666"/>
 
-    <Button
-        android:id="@+id/btn_resetar_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Redefinir Senha"/>
+        <EditText
+            android:id="@+id/et_recuperar_matricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Matrícula"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="12dp"/>
 
-    <TextView
-        android:id="@+id/tv_voltar_login_rec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Voltar para o Login"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/black"
-        android:clickable="true"
-        android:focusable="true"/>
+        <EditText
+            android:id="@+id/et_nova_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nova Senha"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="12dp"/>
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/et_confirmar_nova_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar Nova Senha"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btn_resetar_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Redefinir Senha"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@android:color/white"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_voltar_login_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar para o Login"
+            android:layout_marginTop="24dp"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>

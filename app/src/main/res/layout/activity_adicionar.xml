@@ -34,13 +34,29 @@
             android:gravity="top"
             android:layout_marginBottom="12dp" />
 
-        <EditText
-            android:id="@+id/etLocalizacao"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Localização no Campus"
-            android:inputType="text"
-            android:layout_marginBottom="12dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/etLocalizacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Coordenadas (lat, lon)"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnPegarLocalizacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍"
+                android:textSize="20sp"
+                style="?android:attr/borderlessButtonStyle" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnTirarFoto"
