@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EcoUFRR</string>
+
+    <string-array name="status_opcoes">
+        <item>Pendente</item>
+        <item>Em Análise</item>
+        <item>Resolvido</item>
+    </string-array>
+</resources>
